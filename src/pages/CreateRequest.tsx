@@ -248,7 +248,7 @@ const CreateRequest = () => {
                 <h4 className="text-sm font-medium text-muted-foreground mb-2">SKILLS THEY CAN TEACH</h4>
                 <div className="flex flex-wrap gap-2">
                   {targetSkillsOffered.map((skill) => (
-                    <Badge key={skill.id} variant="secondary" className="bg-success/10 text-success-foreground border-success/20">
+                    <Badge key={skill.id} variant="secondary" className="text-xs bg-success/20 text-success hover:bg-success/30 border-success/30">
                       {skill.title}
                     </Badge>
                   ))}
@@ -269,11 +269,11 @@ const CreateRequest = () => {
               {/* Select Skill to Offer */}
               <div>
                 <label className="text-sm font-medium text-muted-foreground mb-2 block">
-                  SKILL YOU CAN TEACH THEM
+                  SKILL YOU WANT TO LEARN FROM THEM
                 </label>
                 <Select value={selectedOfferedSkill} onValueChange={setSelectedOfferedSkill}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Select a skill you can teach" />
+                    <SelectValue placeholder="Select a skill they can teach" />
                   </SelectTrigger>
                   <SelectContent>
                     {userSkillsOffered.map((skill) => (
@@ -298,11 +298,12 @@ const CreateRequest = () => {
               {/* Select Skill to Request */}
               <div>
                 <label className="text-sm font-medium text-muted-foreground mb-2 block">
-                  SKILL YOU WANT TO LEARN FROM THEM
+                  SKILL YOU CAN TEACH THEM
+                  
                 </label>
                 <Select value={selectedWantedSkill} onValueChange={setSelectedWantedSkill}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Select a skill they can teach" />
+                    <SelectValue placeholder="Select a skill you can teach" />
                   </SelectTrigger>
                   <SelectContent>
                     {targetSkillsOffered.map((skill) => (

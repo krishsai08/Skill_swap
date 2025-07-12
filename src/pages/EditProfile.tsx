@@ -470,8 +470,8 @@ const EditProfile = () => {
                   {skillsOffered.map((skill) => (
                     <Badge 
                       key={skill.id} 
-                      variant="secondary" 
-                      className="bg-success/10 text-success-foreground border-success/20 flex items-center gap-1"
+                      variant="outline" 
+                      className="border-primary/20 text-primary flex items-center gap-1"
                     >
                       {skill.title}
                       <Button

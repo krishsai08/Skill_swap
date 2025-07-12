@@ -256,7 +256,7 @@ const Chat = () => {
               </div>
             </div>
             <div className="flex items-center space-x-2">
-              <Badge variant="secondary" className="bg-success/10 text-success-foreground border-success/20">
+              <Badge variant="secondary" className="text-xs bg-success/20 text-success hover:bg-success/30 border-success/30">
                 {skillRequest.status}
               </Badge>
               {skillRequest.status === 'accepted' && (
@@ -282,7 +282,7 @@ const Chat = () => {
                 <h4 className="font-medium text-sm text-muted-foreground mb-2">
                   {isRequester ? "YOU TEACH" : "THEY TEACH"}
                 </h4>
-                <Badge variant="secondary" className="bg-success/10 text-success-foreground border-success/20">
+                <Badge variant="secondary" className="text-xs bg-success/20 text-success hover:bg-success/30 border-success/30">
                   {skillRequest.offered_skill?.title}
                 </Badge>
               </div>

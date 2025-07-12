@@ -236,7 +236,7 @@ const Networks = () => {
                             <span className="text-muted-foreground">
                               {isRequester ? "You teach:" : "They teach:"}
                             </span>
-                            <Badge variant="secondary" className="bg-success/10 text-success-foreground border-success/20">
+                            <Badge variant="secondary" className="text-xs bg-success/20 text-success hover:bg-success/30 border-success/30">
                               {connection.offered_skill?.title}
                             </Badge>
                           </div>
